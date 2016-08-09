@@ -6,6 +6,7 @@
 	<title>Your App </title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js"></script>
 </head>
 <body>
 	<header>
@@ -43,6 +44,7 @@
 
 	</nav>
 
+	<div id="wrapper">
 	<main>
 		<div class="flex-container">
 		<h2>Dashboard</h2>
@@ -53,10 +55,21 @@
 			<p><span>Alert</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 			<a href=""><img src="icons/close.svg"></a>
 		</div>
-
+		<div class="trafficChartDiv">
+			<canvas id="trafficChart"></canvas>	
+		</div>	
 		
-	</main>
+		<div class="dailyTrafficChartDiv">
+			<canvas id="dailyTrafficChart"></canvas>
+		</div>
 
+		<div class="mobileUsersDiv">
+			<canvas id="mobileUsers"></canvas>
+		</div>
+
+	</main>
+	</div>
+	<script type="text/javascript" src="js/charts.js"></script>
 </body>
 </html>
 
