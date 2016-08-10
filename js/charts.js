@@ -4,7 +4,7 @@ var trafficChart = document.getElementById('trafficChart');
 
 var DailyTrafficChart = document.getElementById('dailyTrafficChart');
 
-var mobileUsersChart = document.getElementById('mobileUsersChart');
+var mobileUsersChart = document.getElementById('mobileUsers');
 
 // Hide legend from charts 
 
@@ -117,24 +117,30 @@ var addDailyTrafficChart = new Chart(dailyTrafficChart, {
 var addMobileUsersChart = new Chart(mobileUsersChart, {
 	type: 'pie',
 	data: {
-	    labels: [
-	        "Red",
-	        "Blue",
-	        "Yellow"
-	    ],
-	    datasets: [
-	        {
-	            data: [300, 50, 100],
-	            backgroundColor: [
-	                "#FF6384",
-	                "#36A2EB",
-	                "#FFCE56"
-	            ],
-	            hoverBackgroundColor: [
-	                "#FF6384",
-	                "#36A2EB",
-	                "#FFCE56"
-	            ]
-	        }]
-	}
+    labels: [
+        "Desktop",
+        "Tablets",
+        "Phones"
+    ],
+    datasets: [
+        {
+            data: [67, 16.5, 16.5],
+            backgroundColor: [
+                "rgba(123, 104, 238, 1)",
+                'rgba(238, 190, 104, 1)',
+                'rgba(152, 238, 104, 1)'
+            ],
+            hoverBackgroundColor: [
+                "rgba(123, 104, 238, 0.4)",
+                'rgba(238, 190, 104, 0.4)',
+                'rgba(152, 238, 104, 0.4)'
+            ]
+        }]
+},
+	options: {
+        legend: {
+            display: true
+        }
+    }
 });
+
