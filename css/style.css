@@ -189,6 +189,38 @@ Charts
 Members
 ========*/
 
+.memberBox {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+}
+
+.memberBox img,
+.member-info,
+.join-date {
+	display: inline-block;
+}
+
+.memberBox img {
+	border-radius: 50%;
+}
+
+.member-info {
+	width: 80%;
+}
+
+.member-info p,
+.member-info a {
+	margin-left: 15px;
+}
+
+.member-info p {
+	margin-bottom: 0;
+}
+
+
+
 
 /*=======
 Icons
