@@ -11,6 +11,7 @@ html {
 body {
 	min-height: 100%;
 	position: relative;
+	font-family: 'Raleway', sans-serif;
 }
 
 
@@ -19,27 +20,40 @@ Header
 ========*/
 
 header {
-	height: 40px;
+	height: 80px;
 	background-color: #7B68EE;
-	display: flex;
-	justify-content: space-between;
+	padding-top: 10px;
 }
 
-h1 {
+header h1 {
 	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 25px;
+	text-align: center;
+	width: 100%;
+}
+
+header h1,
+.profile-div,
+.alertDemo,
+button {
+	color: white;
 }
 
 span {
 	font-weight: lighter;
 }
 
-.header-flexContainer {
-	display: flex;
-	justify-content: space-around;
-}
 
 .profile-div {
-	margin-right: 5px;
+	width: 50%;
+	display: inline-block;
+	border-left: 2px solid grey;
+}
+
+.profile-div p {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .profile-div p,
@@ -48,8 +62,19 @@ span {
 	display: inline-block;
 }
 
+.header-flexContainer {
+	display: flex;
+	justify-content: center;
+}
+
+.bell {
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
 .profilePicture {
 	border-radius: 50%;
+	margin-left: 5px;
 }
 
 /*=======
@@ -57,21 +82,22 @@ Navigation
 ========*/
 
 nav {
-	position: absolute;
-	left: 0;
-	min-height: 100%;
-	width: 40px;
 	background-color: #483D8B;
+	height: 40px;
+	display: flex;
+	justify-content: space-around;
+}
+nav a {
+	display: inline-block;
+	height: 20px;
+	margin-top: 10px;
 }
 
 /*=======
 Main
 ========*/
 
-#wrapper {
-	width: 100vw - 40px;
-	margin-left: 40px;
-}
+
 
 main {
 	width: 95%;
@@ -79,22 +105,19 @@ main {
 }
 
 main h2 {
-	display: inline-block;
+	display: block;
+	width: 100%;
+	text-align: center;
 }
 
-.flex-container {
-	display: flex;
-	justify-content: space-between;
+.flex-container div {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .flex-container input {
-	height: 14px;
-	margin-top: 28px;
-	margin-right: 15px;
-}
-
-.flex-container h2 {
-	margin-left: 15px;
+	width: 100%;
 }
 
 .alertDemo {
@@ -107,6 +130,10 @@ main h2 {
 	margin-top: 15px;
 }
 
+.alertDemo span {
+	font-weight: bold;
+}
+
 .alertDemo p {
 	display: inline-block;
 	margin: 8px 0 8px 10px;
@@ -117,6 +144,21 @@ main h2 {
 	width: 20px;
 	margin-top: 8px;
 	margin-right: 10px;
+}
+
+.trafficChartDiv {
+	margin-top: 20px;
+	height: 250px;
+	padding-bottom: 30px;
+	border-bottom: 1.5px solid gainsboro;
+}
+
+.trafficChartDiv fieldset {
+	margin-bottom: 20px;
+}
+
+.trafficChartDiv h3 {
+	text-align: center;
 }
 
 .social-widget {
@@ -172,17 +214,8 @@ Charts
 .dailyTrafficChartDiv,
 .mobileUsersDiv {
 	width: 100%;
-	height: 400px;
-	margin-top: 50px;
 }
 
-.dailyTrafficChartDiv {
-	margin-top: 150px;
-}
-
-.mobileUsersDiv {
-	margin-top: 150px;
-}
 
 
 /*=======
@@ -219,15 +252,86 @@ Members
 	margin-bottom: 0;
 }
 
+.timespan {
+	margin-top: 0;
+	font-size: 14px;
+}
+
+
+/*=======
+Message User
+========*/
+
+form input,
+form textarea {
+	display: block;
+}
 
 
 
 /*=======
-Icons
+Icons & buttons
 ========*/
 
+.alertDemo img {
+	cursor: pointer;
+}
 
 .icons {
 	height: 20px;
 	width: 20px;
+}
+
+.settings button,
+#message-send {
+	background-color: #7B68EE;
+}
+
+
+
+@media screen (min-width: 768px) {
+	header {
+	height: 40px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-flexContainer {
+	justify-content: space-around;
+}
+
+nav {
+	position: absolute;
+	left: 0;
+	min-height: 100%;
+	width: 40px;
+}
+
+#wrapper {
+	width: 100vw - 40px;
+	margin-left: 40px;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex-container input {
+	height: 14px;
+	margin-top: 28px;
+	margin-right: 15px;
+}
+
+.flex-container h2 {
+	margin-left: 15px;
+}
+
+.trafficChartDiv,
+.dailyTrafficChartDiv,
+.mobileUsersDiv {
+	height: 400px;
+	margin-top: 50px;
+}
+
 }
