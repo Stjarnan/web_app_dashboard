@@ -341,7 +341,7 @@ Icons & buttons
 
 .settings button,
 #message-send {
-	background-color: #7B68EE;
+	background-color: #483D8B;
 	font-weight: bold;
 	border: none;
 }
@@ -584,7 +584,6 @@ form textarea {
 	.trafficChartDiv h3 {
 		display: inline-block;
 		width: 40%;
-		margin-left: 20px;
 	}
 
 	.trafficChartDiv fieldset {
@@ -621,4 +620,68 @@ form textarea {
 		border-top: solid 1px gainsboro;
 		margin-top: 0;
 	}
+
+	.new-members,
+	.recent-activity,
+	.message-user,
+	.settings {
+		width: 49.5%;
+		margin-top: 0;
+	}
+
+	.memberBox {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.message-user,
+	.settings {
+		border: none;
+	}
+
+	.message-user,
+	.new-members {
+		border-right: solid 1px gainsboro;
+	}
+
+	.desktop-flexContainerBottom {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.trafficChartDiv h3,
+	.dailyTrafficChartDiv h3,
+	.mobileUsersDiv h3,
+	.social-widget h3,
+	.new-members h3,
+	.recent-activity h3,
+	.message-user h3,
+	.settings h3 {
+		margin-left: 20px;
+	}
+
+	#message-send {
+		width: 100%;
+		margin-top: 110px;
+	}
+
+	.settings .buttons {
+		width: 320px;
+	}
+
+	.buttons button {
+		width: 40%;
+	}
+
+	.buttons .cancel {
+		background-color: grey;
+	}
+
+	header h1 {
+		text-align: left;
+		margin-left: 20px;
+	}
+
 }
