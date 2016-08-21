@@ -6,6 +6,11 @@ var DailyTrafficChart = document.getElementById('dailyTrafficChart');
 
 var mobileUsersChart = document.getElementById('mobileUsers');
 
+
+Chart.defaults.global.legend.responsive = true;
+Chart.defaults.global.legend.maintainAspectRatio = false;
+
+
 // Hide legend from charts 
 
 Chart.defaults.global.legend.display = false;
