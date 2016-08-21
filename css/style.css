@@ -46,7 +46,7 @@ span {
 
 
 .profile-div {
-	width: 50%;
+	width: 150px;
 	display: inline-block;
 	border-left: 2px solid grey;
 }
@@ -203,9 +203,9 @@ main h2 {
 	width: 45px;
 	background-color: #7B68EE;
 	border-radius: 50%;
-	float: left;
-	margin-top: 25px;
-	margin-left: 25px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .social-widget-p {
@@ -342,11 +342,70 @@ Icons & buttons
 #message-send {
 	background-color: #7B68EE;
 	font-weight: bold;
+	border: none;
 }
 
+@media (min-width: 450px) {
+	.trafficChartDiv,
+	.dailyTrafficChartDiv,
+	.mobileUsersDiv,
+	.social-widget,
+	.new-members,
+	.recent-activity,
+	.message-user,
+	.settings {
+		/* To get some extra space between the charts */
+		margin-top: 80px;
+		height: 300px;
+	}
+
+	.trafficChartDiv {
+		height: 375px;
+	}
+
+	.new-members,
+	.recent-activity {
+		height: 400px;
+	}
+
+	.new {
+		width: 90%;
+	}
+
+	.settings .select {
+		width: 55%;
+	}
+
+	.settings .buttons button {
+		width: 40%;
+		border-radius: 10px;
+		padding: 10px;
+	}
+
+	form input,
+	form textarea {
+		width: 100%;
+	}
+
+	form button {
+		margin-top: 50px;
+		padding: 10px;
+		border-radius: 10px;
+	}
+
+}
+
+@media (min-width: 620px) {
+	.trafficChartDiv,
+	.dailyTrafficChartDiv,
+	.mobileUsersDiv {
+		height: 450px;
+	}
+}
+ 
 
 
-@media screen (min-width: 768px) {
+@media (min-width: 768px) {
 	header {
 	height: 40px;
 	display: flex;
@@ -362,6 +421,17 @@ nav {
 	left: 0;
 	min-height: 100%;
 	width: 40px;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+nav a {
+	margin-left: 10px;
+	margin-top: 30px;
+}
+
+main h2 {
+	text-align: left;
 }
 
 #wrapper {
@@ -386,16 +456,86 @@ nav {
 
 .trafficChartDiv,
 .dailyTrafficChartDiv,
-.mobileUsersDiv {
-	height: 400px;
+.mobileUsersDiv,
+.social-widget,
+.new-members,
+.recent-activity,
+.message-user,
+.settings {
 	margin-top: 50px;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.dailyTrafficChartDiv {
+	height: 400px;
+}
+
+.mobileUsersDiv,
+.trafficChartDiv {
+	height: 500px;
 }
 
 .social-widget {
-	height: 100px;
+	height: 200px;
+	width: 100%;
+}
+
+.trafficChartDiv h3,
+.dailyTrafficChartDiv h3,
+.mobileUsersDiv h3,
+.social-widget h3,
+.new-members h3,
+.recent-activity h3,
+.message-user h3,
+.settings h3 {
+	text-align: left;
+}
+
+.social-widgetFlex {
+	display: flex;
+	justify-content: space-around;
+}
+
+.svg-background {
+	float: left;
+	margin-top: 25px;
+	margin-left: 25px;
+}
+
+
+
+.email-notifications,
+.profile-public {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 100px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.email-notifications p,
+.profile-public p {
+	width: 55%;
+	font-size: 20px;
+	margin-top: 0;
+}
+
+.email-notifications label,
+.profile-public label {
+	width: 30%;
+}
+
+.settings .buttons {
+	width: 40%;
+	margin-top: 40px;
+}
+
+form textarea {
+	padding-bottom: 20px;
 }
 
 }
+
