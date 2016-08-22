@@ -56,7 +56,7 @@ var addTrafficChart = new Chart(trafficChart, {
 			yAxes: [{
 				ticks: {
 					min: 0,
-					max: 2500,
+					max: 500,
 					beginAtZero: true
 				}
 			}]
@@ -73,10 +73,12 @@ var addTrafficChart = new Chart(trafficChart, {
 
 var addDailyTrafficChart = new Chart(dailyTrafficChart, {
 	type: 'bar',
+    multiTooltipTemplate: "<%= datasetLabel %> - <%= value %>",
 	data: {
     labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
     datasets: [
-        {
+        {   
+            label: "Desktop devices",
             backgroundColor: [
                 'rgba(123, 104, 238, 1)',
                 'rgba(123, 104, 238, 1)',
@@ -96,6 +98,28 @@ var addDailyTrafficChart = new Chart(dailyTrafficChart, {
                 'rgba(123, 104, 238, 0.4)'
             ],
             data: [65, 59, 80, 81, 56, 65, 80]
+        },
+        {   
+            label: "Mobile devices",
+            backgroundColor: [
+                'rgba(152, 238, 104, 1)',
+                'rgba(152, 238, 104, 1)',
+                'rgba(152, 238, 104, 1)',
+                'rgba(152, 238, 104, 1)',
+                'rgba(152, 238, 104, 1)',
+                'rgba(152, 238, 104, 1)',
+                'rgba(152, 238, 104, 1)',
+            ],
+            hoverBackgroundColor: [
+                'rgba(152, 238, 104, 0.4)',
+                'rgba(152, 238, 104, 0.4)',
+                'rgba(152, 238, 104, 0.4)',
+                'rgba(152, 238, 104, 0.4)',
+                'rgba(152, 238, 104, 0.4)',
+                'rgba(152, 238, 104, 0.4)',
+                'rgba(152, 238, 104, 0.4)'
+            ],
+            data: [35, 28, 39, 38, 26, 32, 38]
         }
     ]
 },
@@ -125,20 +149,23 @@ var addMobileUsersChart = new Chart(mobileUsersChart, {
     labels: [
         "Desktop",
         "Tablets",
-        "Phones"
+        "Phones",
+        "Televisions"
     ],
     datasets: [
         {
-            data: [67, 16.5, 16.5],
+            data: [62, 16.5, 16.5, 5],
             backgroundColor: [
                 "rgba(123, 104, 238, 1)",
                 'rgba(238, 190, 104, 1)',
-                'rgba(152, 238, 104, 1)'
+                'rgba(152, 238, 104, 1)',
+                'rgba(25, 27, 30, 1)'
             ],
             hoverBackgroundColor: [
                 "rgba(123, 104, 238, 0.4)",
                 'rgba(238, 190, 104, 0.4)',
-                'rgba(152, 238, 104, 0.4)'
+                'rgba(152, 238, 104, 0.4)',
+                'rgba(25, 27, 30, 0.4)'
             ]
         }]
 },
