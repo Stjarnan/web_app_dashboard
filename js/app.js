@@ -7,7 +7,7 @@ var messageConfirmation = $('#message-sent-confirmation');
 //On click, make sure that user has selected a user for the message, and that there is a message to be sent
 sendMessage.click(function(){
 
-	if($(".search-field").val() > 1) {
+	if($(".search-field").val().length > 1) {
 		if(userMessage.val() === "") {
 			messageConfirmation.text("You need to write something to send a message!");
 			messageConfirmation.css("background-color", "rgba(255,0,0, 0.6 )");
@@ -266,3 +266,17 @@ function Monthly() {
 }
 
 
+
+
+// local storage of settings
+
+
+$(".save").click(function() {
+    var $timezone = $(".select select").val();
+    
+    localStorage.setItem('timezone', $timezone );
+});
+
+if(localStorage.getItem('timezone')) {
+    $('.select select').val(localStorage.getItem('timezone'));
+}

@@ -722,7 +722,11 @@ form textarea {
 
 	#message-send {
 		width: 100%;
-		margin-top: 110px;
+		margin-top: 30px;
+	}
+
+	#userMessage {
+		padding-bottom: 50px;
 	}
 
 	.settings .buttons {
