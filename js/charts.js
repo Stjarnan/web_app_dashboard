@@ -2,7 +2,7 @@
 
 var trafficChart = document.getElementById('trafficChart');
 
-var DailyTrafficChart = document.getElementById('dailyTrafficChart');
+var dailyTrafficChart = document.getElementById('dailyTrafficChart');
 
 var mobileUsersChart = document.getElementById('mobileUsers');
 

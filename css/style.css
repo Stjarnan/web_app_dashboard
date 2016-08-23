@@ -503,7 +503,7 @@ main h2 {
 }
 
 #wrapper {
-	width: 100vw - 40px;
+	width: calc(100vw - 40px);
 	margin-left: 40px;
 }
 

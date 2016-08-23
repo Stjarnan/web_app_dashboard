@@ -43,12 +43,12 @@ $(".bell").click(function(event){
 
 //remove the notifications if user clicks on cross
  $(".notification-cross").click(function(){
- 	$(this).parent().remove()
+ 	$(this).parent().remove();
  	// If all notifications has been removed, close menu
 	if ($(".notifications").children().length < 1) {
 		$(".notifications").hide("slow");
 	}
- })
+ });
 
 
 // Trafficchart based on switch button chosen
@@ -290,7 +290,7 @@ if(localStorage.getItem('email-notifications')) {
      if(localStorage.getItem('email-notifications') === 'false') { 
          $('.email-notifications .switch-candy input').prop("checked", false);
      } else {
-         $('.email-notifications .switch-candy input').prop("checked", true)
+         $('.email-notifications .switch-candy input').prop("checked", true);
      }
      
 }
@@ -299,7 +299,7 @@ if(localStorage.getItem('profile-public')) {
      if(localStorage.getItem('profile-public') === 'false') { 
          $('.profile-public .switch-candy input').prop("checked", false);
      } else {
-         $('.profile-public .switch-candy input').prop("checked", true)
+         $('.profile-public .switch-candy input').prop("checked", true);
      }
      
 }
