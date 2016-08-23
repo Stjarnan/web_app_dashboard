@@ -273,10 +273,35 @@ function Monthly() {
 
 $(".save").click(function() {
     var $timezone = $(".select select").val();
-    
+    var $notifications = $(".email-notifications .switch-candy input").prop("checked");
+    var $profilePublic = $(".profile-public .switch-candy input").prop("checked");
+
+
     localStorage.setItem('timezone', $timezone );
+    localStorage.setItem('email-notifications', $notifications);
+    localStorage.setItem('profile-public', $profilePublic);
 });
 
 if(localStorage.getItem('timezone')) {
     $('.select select').val(localStorage.getItem('timezone'));
 }
+
+if(localStorage.getItem('email-notifications')) {
+     if(localStorage.getItem('email-notifications') === 'false') { 
+         $('.email-notifications .switch-candy input').prop("checked", false);
+     } else {
+         $('.email-notifications .switch-candy input').prop("checked", true)
+     }
+     
+}
+
+if(localStorage.getItem('profile-public')) {
+     if(localStorage.getItem('profile-public') === 'false') { 
+         $('.profile-public .switch-candy input').prop("checked", false);
+     } else {
+         $('.profile-public .switch-candy input').prop("checked", true)
+     }
+     
+}
+
+

@@ -217,7 +217,7 @@ main h2 {
 
 .social-widget {
 	width: 100%;
-	height: 400px;
+	height: 550px;
 }
 
 .social-widgetFlex {
@@ -286,7 +286,7 @@ Members
 
 .memberBox {
 	width: 100%;
-	height: 80px;
+	height: 90px;
 	display: flex;
 	align-items: center;
 	border-bottom: 1px solid gainsboro;
@@ -391,6 +391,7 @@ Icons & buttons
 	width: 75%;
 	margin: 0 auto;
 }
+
 
 .settings button,
 #message-send {
